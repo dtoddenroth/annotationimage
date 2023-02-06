@@ -54,7 +54,8 @@ WORK_DIR = '/brat/work'
 #     'editor': 'annotate',
 
 USER_PASSWORD = {
-    'anne':'anne'
+    'anne':'anne',
+    'bob':'bob'
 }
 
 
