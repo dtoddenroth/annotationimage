@@ -56,3 +56,10 @@ docker cp $(docker container \
 ls --all --filter=ancestor=brattask \
 --format "{{.ID}}"):/brat/doc/. ./outputs
 ```
+Alternatively, annotation files can be kept synchronized 
+during labeling via a volume: 
+```
+mkdir outputs
+cp doc/* outputs
+docker run -p 8001:8001 -v $(pwd)/outputs:/brat/doc brattask
+```
