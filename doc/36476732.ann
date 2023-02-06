@@ -1,1 +1,20 @@
-
+T1	Candidate 49 57	disorder
+T2	Candidate 104 113	Alzheimer
+T3	Candidate 116 123	disease
+T4	Candidate 124 139	pathophysiology
+T5	Candidate 181 212	Attention-deficit/hyperactivity
+T6	Candidate 213 221	disorder
+T7	Candidate 315 324	Alzheimer
+T8	Candidate 327 334	Disease
+T9	Candidate 336 338	AD
+T10	Candidate 445 452	disease
+T11	Candidate 826 828	AD
+T12	Candidate 829 844	pathophysiology
+T13	Candidate 965 974	diagnosis
+T14	Candidate 1329 1331	AD
+T15	Candidate 1659 1666	atrophy
+T16	Candidate 1816 1818	AD
+T17	Candidate 1819 1834	pathophysiology
+T18	Candidate 1995 2004	pathology
+T19	Candidate 2056 2064	Springer
+T20	Candidate 2065 2071	Nature
