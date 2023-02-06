@@ -28,7 +28,7 @@ docker run -p 8001:8001 brattask
 ## Notes
 
 The utilized function `getargspec` from `inspect` 
-was [removed in Python 3.11](https://docs.python.org/3/whatsnew/3.11.html#inspect), 
+was [removed in Python 3.11](https://docs.python.org/3/whatsnew/3.11.html#removed), 
 so `python:3.10-alpine` serves as the base image. 
 
 To work around a missing mime type for `xhtml` files, 
@@ -43,7 +43,7 @@ Interactively inspect a container while exposing the predefined port (8001):
 docker run -p 8001:8001 -it brattask sh
 ```
 
-Extract annotations before shutting down container, 
+Extract annotations before shutting down, 
 either by freezing files into another image via
  `docker commit` and `docker save`, or by copying directly from the container: 
 ```
