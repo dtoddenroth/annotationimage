@@ -1,8 +1,8 @@
 
-# bratimage
+# annotationimage
 
-Bundles the [Brat](http://http://brat.nlplab.org/) annotation tool
-with configuration files and documents for a particular task. 
+Bundles the [Brat](http://http://brat.nlplab.org/) tool
+with configuration files and documents for a particular annotation task. 
 
 ## Contents
  * `Dockerfile`: instructions for image building
@@ -21,8 +21,8 @@ Other options in `config.py` and `.conf` files [can be modified](https://brat.nl
 ## Set into motion
 
 ```
-docker build -t brattask --target brattask .
-docker run -p 8001:8001 brattask
+docker build -t annotationtask --target annotationtask .
+docker run -p 8001:8001 annotationtask
 ```
 
 ## Notes
@@ -40,20 +40,20 @@ and [1366](https://github.com/nlplab/brat/issues/1366)).
 
 Interactively inspect a container while exposing the predefined port (8001):
 ```
-docker run -p 8001:8001 -it brattask sh
+docker run -p 8001:8001 -it annotationtask sh
 ```
 
 Extract annotations before shutting down, 
 either by freezing files into another image via
  `docker commit` and `docker save`, or by copying directly from the container: 
 ```
-docker container ls --all --filter=ancestor=brattask --format "{{.ID}}"
+docker container ls --all --filter=ancestor=annotationtask --format "{{.ID}}"
 docker cp 00f498698374:/brat/doc/. ./outputs
 ```
 or 
 ```
 docker cp $(docker container \
-ls --all --filter=ancestor=brattask \
+ls --all --filter=ancestor=annotationtask \
 --format "{{.ID}}"):/brat/doc/. ./outputs
 ```
 
@@ -62,5 +62,5 @@ during labeling via a volume:
 ```
 mkdir workdir
 cp doc/* workdir
-docker run -p 8001:8001 -v $(pwd)/workdir:/brat/doc brattask
+docker run -p 8001:8001 -v $(pwd)/workdir:/brat/doc annotationtask
 ```
