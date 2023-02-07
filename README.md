@@ -47,13 +47,12 @@ Extract annotations before shutting down,
 either by freezing files into another image via
  `docker commit` and `docker save`, or by copying directly from the container: 
 ```
-docker container ls --all --filter=ancestor=annotationtask --format "{{.ID}}"
+docker container ls --filter "ancestor=annotationtask" --format "{{.ID}}"
 docker cp 00f498698374:/brat/doc/. ./outputs
 ```
 or 
 ```
-docker cp $(docker container \
-ls --all --filter=ancestor=annotationtask \
+docker cp $(docker container ls --filter "ancestor=annotationtask" \
 --format "{{.ID}}"):/brat/doc/. ./outputs
 ```
 
