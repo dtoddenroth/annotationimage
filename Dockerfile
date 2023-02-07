@@ -6,9 +6,8 @@ RUN unzip /tmp/brat-latest.zip -d /tmp/
 RUN cp /tmp/brat-master/* . -r
 RUN echo "application/xhtml+xml xhtml" > /etc/mime.types
 
-FROM bratbase AS brattask
+FROM bratbase AS annotationtask
 ADD doc doc/
 ADD config/* ./
 RUN mkdir work
 CMD ["/brat/standalone.py"]
-
