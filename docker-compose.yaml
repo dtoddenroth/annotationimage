@@ -1,0 +1,11 @@
+version: '3'
+services:
+  annotationtask:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: annotationtask
+    ports:
+      - 8001:8001
+    volumes:
+      - .:/brat/doc
