@@ -6,7 +6,7 @@ with configuration files and documents for a particular annotation task.
 
 ## Contents
  * `Dockerfile`: instructions for image building
- * `config/`: directory with templates for [Brat](http://http://brat.nlplab.org/) configuration files
+ * `config/`: directory with templates for [Brat](http://brat.nlplab.org/) configuration files
  * `doc/`: directory with documents to be annotated (`.txt` and `.ann` files)
 
 Building instructions copy files from `config/` and `doc/` to the image . 
